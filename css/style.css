@@ -1,12 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 
@@ -18,47 +18,129 @@ body {
 }
 
 @keyframes moveGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* CONTEÚDO PRINCIPAL */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5%;
 }
+
+header .logo {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
 
 nav a {
-    margin: 0 1rem;
-    color: #00000050;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-block;
-    transition: 0.3s, transform 0.3s; 
+  margin: 0 1rem;
+  color: #00000050;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: 0.3s, transform 0.3s;
 }
 
-nav a:hover{
+nav a:hover {
   color: #3CA668;
   transform: scale(1.1);
 }
 
 .btn-login {
-    background: #33935B;
-    border: none;
-    color: white;
-    padding: 0.6rem 1.4rem;
-    border-radius: 8px;
-    cursor: pointer;
+  background: #33935B;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.hero {
+/* Botão hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #3CA668;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  nav.nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  nav.nav-links a {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 5%;
+  }
+
+  nav.nav-links.active {
+    display: flex;
+  }
+
+  .btn-login {
+    display: none;
+  }
+
+  header .logo {
+    width: 60px;
+  }
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
 }
 
 .hero-text {
@@ -120,6 +202,78 @@ nav a:hover{
   color: #3CA668;
 }
 
+/* Responsividade do Hero */
+@media (max-width: 1100px) {
+  .hero {
+    flex-direction: column;
+    /* empilha texto e imagem */
+    align-items: center;
+    text-align: center;
+    padding: 2rem 5%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    width: 80%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1;
+    /* coloca a imagem antes do texto */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .social i {
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+  }
+}
+
+
 
 /* CONHEÇA NOSSA HISTÓRIA */
 .about-section {
@@ -171,7 +325,7 @@ nav a:hover{
   width: 350px;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease;
 }
 
