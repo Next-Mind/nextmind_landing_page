@@ -67,3 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     descriptionBox.classList.remove("active");
   }
 });
+
+const botao = document.querySelector('.btn-login');
+
+  // Adiciona o evento de clique
+  botao.addEventListener('click', () => {
+    window.open('https://painel.nextmind.sbs/', '_blank');
+  });
