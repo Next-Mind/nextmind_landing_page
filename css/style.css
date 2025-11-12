@@ -663,7 +663,7 @@ nav a:hover {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .download-title {
     font-size: 26px;
   }
