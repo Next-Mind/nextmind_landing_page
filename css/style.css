@@ -503,6 +503,7 @@ nav a:hover {
   padding: 3rem 8% 1rem;
   margin-top: 5rem;
   font-family: 'Inter', sans-serif;
+  margin-top: 0;
 }
 
 .footer-container {
@@ -599,5 +600,75 @@ nav a:hover {
 
   .social-icons a {
     margin-right: 0.8rem;
+  }
+}
+
+/* ===== DOWNLOAD SECTION ===== */
+.download-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.download-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.download-subtitle {
+  text-transform: lowercase;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.download-title {
+  font-size: 32px;
+  color: #3aa360;
+  /* verde principal da NextMind */
+  line-height: 1.4;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.download-title span {
+  color: #3aa360;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.download-buttons img {
+  height: 55px;
+  transition: transform 0.2s ease;
+}
+
+.download-buttons img:hover {
+  transform: scale(1.05);
+}
+
+.mockup-container img {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .download-title {
+    font-size: 26px;
+  }
+
+  .download-buttons img {
+    height: 50px;
   }
 }

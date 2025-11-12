@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -31,9 +31,10 @@
     <header>
         <img src="assets/images/logo.png" alt="Logo da NextMind" class="logo">
         <nav class="nav-links">
-            <a href="#">Inicio</a>
+            <a href="#home">Início</a>
             <a href="#about">Conheça NextMind</a>
             <a href="#team">Quem Somos Nós?</a>
+            <a href="#download">Download</a>
         </nav>
         <button class="btn-login">Entrar</button>
 
@@ -45,6 +46,7 @@
         </div>
     </header>
 
+
     <main>
         <!-- CONTEÚDO PRINCIPAL -->
         <section class="hero" id="home">
@@ -53,7 +55,7 @@
                 <h1>NEXTMIND</h1>
                 <p class="description">Acesse recursos e apoio emocional e enfrente os desafios do dia a dia com mais
                     equilíbrio.</p>
-                <button class="btn-primary">Conheça nós →</button>
+                <a href="#about"><button class="btn-primary">Conheça nós →</button></a>
                 <div class="social">
                     <a href="https://www.instagram.com/nextmind.ctl/" target="_blank" rel="noopener"><i
                             class="fa-brands fa-instagram"></i></a>
@@ -168,6 +170,29 @@
 
             </div>
         </section>
+        <section id="download" class="download-section">
+            <div class="download-content">
+                <p class="download-subtitle">baixe agora</p>
+                <h2 class="download-title">
+                    Leve a experiência da <span>NextMind</span> com você.<br>
+                    Disponível para Android.
+                </h2>
+
+                <div class="download-buttons">
+                    <a href="#" class="store-btn">
+                        <img src="assets/icons/download_appStore.png" alt="App Store">
+                    </a>
+                    <a href="#" class="store-btn">
+                        <img src="assets/icons/download_playStore.png" alt="Google Play">
+                    </a>
+                </div>
+
+                <div class="mockup-container">
+                    <img src="assets/images/mockup_phones.png" alt="NextMind App Preview">
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -180,11 +205,13 @@
             <div class="footer-links">
                 <h4>Links Rápidos</h4>
                 <ul>
-                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#home">Início</a></li>
                     <li><a href="#about">Conheça NextMind</a></li>
                     <li><a href="#team">Quem Somos Nós?</a></li>
+                    <li><a href="#download">Download</a></li>
                 </ul>
             </div>
+
 
             <div class="footer-social">
                 <h4>Conecte-se</h4>
